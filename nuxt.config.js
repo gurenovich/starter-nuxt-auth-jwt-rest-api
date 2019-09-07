@@ -17,7 +17,7 @@ module.exports = {
 
   css: [],
 
-  plugins: [],
+  plugins: ['@/plugins/axios'],
 
   modules: ['@nuxtjs/axios'],
 

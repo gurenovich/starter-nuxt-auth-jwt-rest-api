@@ -2,21 +2,35 @@
 
 > Start template with nuxtjs and auth jwt rest api
 
-## Build Setup
+## Install
 
 ``` bash
 # install dependencies
-$ npm install
+$ npm i
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+# create .env file with PRISMA_MANAGEMENT_API_SECRET=supersecret
 
-# build for production and launch server
-$ npm run build
-$ npm start
+# change /server/prisma/docker-compose.yml (PROJECT_NAME)
 
-# generate static project
-$ npm run generate
+# change /server/prisma/prisma.yml (PROJECT_NAME)
+
+# install docker in /server/prisma
+$ docker-compose up -d
+
+# prisma
+$ prisma deploy
 ```
 
-For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
+Check out http://localhost:4466/PROJECT_NAME/_admin
+```
+# generate new token for web interface _admin and paste him in settings
+$ prisma token
+```
+
+Graphql playground:
+http://localhost:4466/PROJECT_NAME/
+```
+{
+  "Authorization": "Bearer YOUR_TOKEN"
+}
+```

@@ -1,0 +1,7 @@
+endpoint: http://localhost:4466/PROJECT_NAME
+datamodel: datamodel.prisma
+secret: supersecret
+
+generate:
+  - generator: javascript-client
+    output: ./generated/prisma-client/
